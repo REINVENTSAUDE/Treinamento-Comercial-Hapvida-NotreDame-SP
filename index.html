@@ -30,14 +30,11 @@
   .btn-prod.ativo { border-color: var(--verde); background: #f0faf5; }
   .btn-prod .nome { font-weight: 800; font-size: 15px; color: var(--azul-esc); }
   .btn-prod .abran { font-size: 11.5px; color: var(--cinza); margin-top: 6px; font-weight: 600; }
-  .btn-prod .chip { display: inline-block; margin: 7px 4px 0 0; font-size: 10.5px; font-weight: 700; background: #e8f0fa; color: var(--azul); padding: 3px 8px; border-radius: 20px; }
   .painel { display: none; margin-top: 18px; border: 2px solid var(--verde); border-radius: 14px; overflow: hidden; }
   .painel.aberto { display: block; }
   .painel-hd { background: linear-gradient(120deg, var(--azul-esc), var(--azul)); color: #fff; padding: 18px 22px; display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; flex-wrap: wrap; }
   .painel-hd .pinfo { max-width: 640px; }
   .painel-hd .nome { font-size: 20px; font-weight: 800; }
-  .painel-hd .preco { font-size: 24px; font-weight: 800; color: #d7f5e2; text-align: right; }
-  .painel-hd .preco small { display: block; font-size: 11px; font-weight: 600; opacity: .85; }
   .painel-hd .tagline { font-size: 13px; opacity: .92; margin-top: 6px; }
   .abas { display: flex; gap: 8px; flex-wrap: wrap; padding: 14px 22px 0; background: #f5f9fc; border-bottom: 1px solid var(--borda); }
   .aba { border: 1px solid var(--borda); border-bottom: none; background: #fff; color: var(--azul); font-size: 12.5px; font-weight: 700; padding: 9px 14px; border-radius: 10px 10px 0 0; cursor: pointer; }
@@ -49,9 +46,6 @@
   .bloco h4 { font-size: 12px; text-transform: uppercase; letter-spacing: .5px; color: var(--verde-esc); margin-bottom: 6px; }
   ul.lista { margin: 0; padding: 0 0 0 20px; font-size: 13.5px; line-height: 1.75; }
   ul.lista li::marker { color: var(--verde); }
-  .mini-tab { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .mini-tab td { padding: 7px 10px; border-bottom: 1px solid var(--borda); vertical-align: top; }
-  .mini-tab td:first-child { color: var(--cinza); width: 190px; font-weight: 600; }
   .aviso { background: #fff7e6; border: 1px solid #f0d9a0; color: #7a5a00; font-size: 12.5px; border-radius: 8px; padding: 9px 12px; margin-top: 12px; }
   .aviso.azul { background: #e8f0fa; border-color: #b9d2ef; color: var(--azul); }
   .tabela { width: 100%; border-collapse: collapse; font-size: 12.5px; }
@@ -90,7 +84,6 @@
     .topo img { height: 46px; }
     .sec { padding: 14px; }
     .painel-hd { padding: 14px 16px; }
-    .painel-hd .preco { text-align: left; }
     .abas { padding: 10px 14px 0; }
     .aba-corpo { padding: 14px; }
     .tabela th, .tabela td { padding: 6px 7px; font-size: 11px; }
@@ -103,9 +96,9 @@
   <img src="Logo.png" alt="Logo" onerror="this.style.display='none'">
   <div style="flex:1;min-width:240px;">
     <h1>Treinamento Comercial – Hapvida NotreDame SP</h1>
-    <div class="sub">Portfólio de produtos e regras comerciais • PF | SS | PME • Base: Guia de Produtos SP Capital + Treinamento do Corretor (08.2026)</div>
+    <div class="sub">Portfólio de produtos e regras comerciais • PF | SS | PME • Base: Treinamento do Corretor (08.2026)</div>
   </div>
-  <span class="tag">Registros ANS nos cards</span>
+  <span class="tag">Treinamento 08.2026</span>
 </header>
 
 <nav class="menu">
@@ -122,7 +115,7 @@
 
 <section class="sec" id="portfolio">
   <h2><span class="n">1</span>Portfólio de Produtos</h2>
-  <div class="desc">Clique em um produto para ver o essencial (preço, abrangência, mercado e canais). Dentro do card, use os botões para aprofundar: visão geral, rede, laboratórios, cidades e registro ANS.</div>
+  <div class="desc">Clique em um produto para ver o essencial (abrangência, mercado e canais). Dentro do card, use os botões para aprofundar.</div>
   <div class="grid-prod" id="gridProdutos"></div>
   <div class="painel" id="painelProduto">
     <div class="painel-hd">
@@ -130,12 +123,10 @@
         <div class="nome" id="pNome"></div>
         <div class="tagline" id="pTagline"></div>
       </div>
-      <div class="preco" id="pPreco"></div>
     </div>
     <div class="abas" id="pAbas"></div>
     <div class="aba-corpo" id="pCorpo"></div>
   </div>
-  <div class="aviso azul" style="margin-top:14px;">Ofertas e preços: faixa 00-18, empresas Não MEI de 02 a 29 vidas, compulsório com coparticipação total. Tabela de preços sujeita a alteração — consulte sempre a tabela vigente no Planium.</div>
 </section>
 
 <section class="sec" id="oferta">
@@ -149,7 +140,6 @@
       <tbody id="tabelaOferta"></tbody>
     </table>
   </div>
-  <div class="aviso" style="margin-top:12px;">Legenda de diferenciais do portfólio: 🔵 Rede Própria • ⚕ P.S. Credenciado • 🏥 Rede Credenciada • 💵 Reembolso • 💉 Vacinas • ✈ Assistência de Viagem Internacional • 🩺 Check-Up • 🛎 Concierge. Toda internação em rede própria é isenta de copay nos produtos SS/PME.</div>
 </section>
 
 <section class="sec" id="regras">
@@ -341,24 +331,29 @@
 </section>
 
 <footer>
-  Material de treinamento interno – Hapvida NotreDame Intermédica. Fontes: Guia de Produtos SP Capital e Treinamento Comercial PF/SS/PME 08.2026.<br>
-  Responsável Técnico: Dr. Francisco Floriano Delgado Perdigão – CRM/CE 4953 • Diretor Médico NotreDame Intermédica: Dr. Rodolfo Pires de Albuquerque – CRM/SP 40137.<br>
-  Registros ANS por produto indicados nos cards. Tabelas de preços sujeitas a alteração. Boas vendas!
+  <div class="aviso" style="margin-top:12px;">Responsável Técnico: Dr. Francisco Floriano Delgado Perdigão – CRM/CE 4953 • Diretor Médico NotreDame Intermédica: Dr. Rodolfo Pires de Albuquerque – CRM/SP 40137.<br>Tabelas de preços sujeitas a alteração. Boas vendas!</div>
 </footer>
 
 <script>
+function esc(s) {
+  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function listaUl(arr) {
+  var h = '<ul class="lista">';
+  for (var i = 0; i < arr.length; i++) h += '<li>' + arr[i] + '</li>';
+  return h + '</ul>';
+}
+
 var PRODUTOS = [
   {
     nome: "Nosso Médico",
-    preco: "R$ 79,35/mês*",
-    precoObs: "*Faixa 00-18 • Não MEI 2-29 vidas • compulsório c/ copay total",
     tagline: "Médicos especializados em Medicina da Família, com acompanhamento dedicado à saúde do beneficiário (presencial e online).",
     canais: ["IND","SS","PME","CORP","ADES","LIC"],
     abran: "Grupo de Municípios",
     mercado: "PF | SS | PME",
     minVidas: "1 vida (PF)",
     carac: [
-      ["Abrangência","Grupo de Municípios – RMSP, Campinas, Jundiaí, Americana e Sorocaba"],
       ["Segmentação","Ambulatorial + Hospitalar com Obstetrícia (AH | AHO)"],
       ["Acomodação","Enfermaria e Apartamento"],
       ["Coparticipação","Copay Total e Parcial | S/ Copay somente Corp"],
@@ -366,64 +361,77 @@ var PRODUTOS = [
       ["Médico da família","Atendimento presencial e online"]
     ],
     difer: [
-      "Canais exclusivos e até 3 dias úteis para consulta",
-      "Acolhimento e Promoção à Saúde",
-      "Acompanhamento Integral da Saúde",
-      "Especialidades de livre acesso: Urgência/Emergência, Ginecologia/Obstetrícia, Pediatria, Oftalmologia e Terapias de Apoio",
-      "Médico da família presencial e online",
+      "Especiais de livre acesso: Urgência/Emergência, Ginecologia/Obstetrícia, Pediatria, Oftalmologia, Terapias de Apoio",
+      "Cuidado contínuo — modelo que acompanha cada etapa da saúde",
       "Programas e Protocolos de Saúde Hapvida NotreDame"
     ],
     rede: ["Hospital Bosque da Saúde","Hospital e Mat. Nossa Senhora do Rosário","Hospital e Mat. Salvalus","Hospital Keila Ferreira","Hospital Frei Galvão","Hospital Santana Mogi","Mat. Notrecare ABC","Hospital Jardim Anália Franco","Hospital Cruzeiro do Sul","Hospital Nova Vida","Hospital São Bernardo"],
     labs: ["Diagnóstico Vila Carrão","Diagnóstico Santa Cruz","Notrelabs Tatuapé","Notrelabs Qualivida Angélica"],
     cidades: ["RMSP (19 cidades): Arujá, Barueri, Caieiras, Carapicuíba, Cotia, Diadema, Guarulhos, Itapevi, Jandira, Mauá, Mogi das Cruzes, Osasco, Ribeirão Pires, Santo André, Santos, São Bernardo do Campo, São Paulo (Capital), São Vicente e Taboão da Serra","Outras praças: Campinas, Jundiaí, Americana e Sorocaba"],
-    ans: "507.184/25-4",
     extras: []
   },
   {
     nome: "Smart Up",
-    preco: "R$ 95,38/mês*",
-    precoObs: "*Faixa 00-18 • Não MEI 2-29 vidas • compulsório c/ copay total",
-    tagline: "Novo produto que amplia o acesso à saúde, agora com mais 4 prestadores de urgência e emergência. Atende em mais de 40 cidades.",
+    tagline: "Atende em mais de 40 cidades! Rede Própria e Rede Credenciada, com mais 4 prestadores de urgência e emergência.",
     canais: ["IND","SS","PME","CORP","ADES","LIC"],
     abran: "Grupo de Municípios",
     mercado: "PF | SS | PME",
     minVidas: "1 vida (PF)",
     carac: [
-      ["Abrangência","Grupo de Municípios – SP (46 cidades) e RJ (12 cidades)"],
       ["Segmentação","Ambulatorial + Hospitalar com Obstetrícia (AH | AHO)"],
-      ["Acomodação","Enfermaria e Apartamento* | *PF: apartamento a partir de 50 anos; SS/PME: todas as idades"],
+      ["Acomodação","Enfermaria e Apartamento* | *PF: a partir de 50 anos; *SS/PME: todas as idades"],
       ["Atendimento","Rede Própria e Rede Credenciada"],
-      ["Coparticipação","Copay Total e Parcial | S/ Copay somente Corp"],
       ["Plano","Completo Ambulatorial, Hospitalar c/ Obstetrícia e Odonto (ROL ANS)"],
-      ["Versão PF ambulatorial","PF Smart Up Ambulatorial (SP/RJ): U/E 24h (12h de permanência), consultas, exames, cirurgias ambulatoriais e terapias – NÃO tem atendimento hospitalar; após 12h = particular ou SUS quando houver vaga"]
+      ["Versão PF ambulatorial","U/E 24h (12h de permanência), consultas, exames, cirurgias ambulatoriais e terapias — NÃO tem atendimento hospitalar"]
     ],
     difer: [
-      "Hospitais próprios conectados nas principais regiões de São Paulo (Capital e RM, Campinas, Jundiaí e Sorocaba)",
+      "Hospitais próprios conectados nas principais regiões de São Paulo",
       "Pronto Socorro em todas as regiões da capital",
       "Mais 4 prestadores de urgência e emergência",
-      "Abrangência Smart UP: apenas São Paulo | Smart RIO: apenas Rio de Janeiro"
+      "Smart UP: apenas São Paulo | Smart RIO: apenas Rio de Janeiro"
     ],
     rede: ["Toda a Rede do Nosso Médico +","P.S. Hospital Albert Sabin","P.S. Hospital Portinari","P.S. Hospital Cruz Azul","P.S. Hospital Vidas","Hospital Paulo Sacramento","Hospital Renascença Campinas","Hospital e Mat. Modelo","Hospital Notrecare Sorocaba","Cema"],
     labs: ["Diagnóstico Vila Carrão","Diagnóstico Santa Cruz","Notrelabs Tatuapé","Notrelabs Qualivida Angélica"],
-    cidades: ["Smart UP SP: Americana, Arujá, Barueri, Caieiras, Cajamar, Campinas, Campo Limpo Paulista, Carapicuíba, Cotia, Cubatão, Diadema, Embu das Artes, Ferraz de Vasconcelos, Guararema, Guarujá, Guarulhos, Hortolândia, Itapevi, Itaquaquecetuba, Itu, Itupeva, Jandira, Jundiaí, Louveira, Mauá, Mogi das Cruzes, Nova Odessa, Osasco, Poá, Ribeirão Pires, Santa Bárbara d'Oeste, Santa Isabel, Santo André, Santos, São Bernardo do Campo, São Caetano do Sul, São Paulo, São Vicente, Sorocaba, Sumaré, Suzano, Taboão da Serra, Várzea Paulista, Vinhedo, Votorantim","Smart RIO: Belford Roxo, Duque de Caxias, Itaboraí, Magé, Maricá, Mesquita, Nilópolis, Niterói, Nova Iguaçu, Rio de Janeiro, São Gonçalo, São João de Meriti","Praças PF: SP Capital+RM, Baixada Santista, Campinas, Sorocaba e Jundiaí"],
-    ans: "508.100/26-9",
+    cidades: ["Smart UP SP: Americana, Arujá, Barueri, Caieiras, Cajamar, Campinas, Campo Limpo Paulista, Carapicuíba, Cotia, Cubatão, Diadema, Embu das Artes, Ferraz de Vasconcelos, Guararema, Guarujá, Guarulhos, Hortolândia, Itapevi, Itaquaquecetuba, Itu, Itupeva, Jandira, Jundiaí, Louveira, Mauá, Mogi das Cruzes, Nova Odessa, Osasco, Poá, Ribeirão Pires, Santa Bárbara d'Oeste, Santa Isabel, Santo André, Santos, São Bernardo do Campo, São Caetano do Sul, São Paulo, São Vicente, Sorocaba, Sumaré, Suzano, Taboão da Serra, Várzea Paulista, Vinhedo, Votorantim","Smart RIO: Belford Roxo, Duque de Caxias, Itaboraí, Magé, Maricá, Mesquita, Nilópolis, Niterói, Nova Iguaçu, Rio de Janeiro, São Gonçalo, São João de Meriti"],
     extras: []
   },
   {
+    nome: "Smart Up Ambulatorial",
+    tagline: "Plano PF ambulatorial — U/E 24h, consultas, exames, cirurgias ambulatoriais e terapias. NÃO tem atendimento hospitalar.",
+    canais: ["IND"],
+    abran: "SP e RJ",
+    mercado: "PF",
+    minVidas: "1 vida (PF)",
+    carac: [
+      ["Segmentação","Apenas Ambulatorial (A)"],
+      ["Acomodação","Ambulatorial"],
+      ["Atendimento","Rede Própria e Rede Credenciada"],
+      ["Urgência/Emergência","24h com até 12h de permanência"],
+      ["Plano","Ambulatorial (ROL ANS) — sem cobertura hospitalar"]
+    ],
+    difer: [
+      "Urgência/Emergência 24h (12h de permanência)",
+      "Consulta em todas as especialidades",
+      "Exames de rotina (média e alta complexidade)",
+      "Cirurgias ambulatoriais (verruga, unha encravada, pintas etc)",
+      "Terapias"
+    ],
+    rede: ["Toda a Rede do Nosso Médico (ambulatorial)"],
+    labs: ["Diagnóstico Vila Carrão","Diagnóstico Santa Cruz","Notrelabs Tatuapé","Notrelabs Qualivida Angélica"],
+    cidades: ["SP: Americana, Barueri, Carapicuíba, Cajamar, Campinas, Campo Limpo Paulista, Caieiras, Cotia, Cubatão, Diadema, Embu das Artes, Guarujá, Guarulhos, Hortolândia, Itu, Itupeva, Itapevi, Jandira, Jundiaí, Louveira, Mauá, Nova Odessa, Osasco, Santa Bárbara D'Oeste, Santo André, São Bernardo do Campo, São Caetano, Santos, São Vicente, Ribeirão Pires, Sorocaba, Taboão da Serra, São Paulo, Sumaré, Várzea Paulista, Vinhedo e Votorantim","RJ: Belford Roxo, Duque de Caxias, Itaboraí, Maricá, Mesquita, Nilópolis, Niterói, Nova Iguaçu, Rio de Janeiro, São Gonçalo e São João do Meriti"],
+    extras: [["Atenção",["Após 12h ou internação = particular ou transferência para o SUS quando houver vaga","NÃO tem atendimento Hospitalar"]]]
+  },
+  {
     nome: "Smart Flex SP",
-    preco: "R$ 115,38/mês*",
-    precoObs: "*Faixa 00-18 • Não MEI 2-29 vidas • compulsório c/ copay total",
-    tagline: "Amplia o acesso à saúde com uma rede credenciada mais abrangente. Mais liberdade de escolha e conveniência. Atende em mais de 50 cidades.",
+    tagline: "Amplia o acesso à saúde com mais de 50 cidades! Rede Própria e Rede Credenciada ampliada.",
     canais: ["SS","PME","CORP","ADES","LIC"],
     abran: "Grupo de Municípios",
     mercado: "SS | PME",
     minVidas: "1 vida",
     carac: [
-      ["Abrangência","Grupo de Municípios – mais de 50 cidades (sem Rio de Janeiro)"],
       ["Segmentação","Ambulatorial + Hospitalar com Obstetrícia (AH | AHO)"],
       ["Acomodação","Enfermaria e Apartamento"],
       ["Atendimento","Rede Própria Hapvida NotreDame + Rede Credenciada ampliada"],
-      ["Coparticipação","Copay Total e Parcial | S/ Copay somente Corp"],
       ["Plano","Completo Ambulatorial, Hospitalar c/ Obstetrícia e Odonto (ROL ANS)"]
     ],
     difer: [
@@ -432,26 +440,21 @@ var PRODUTOS = [
     ],
     rede: ["Toda a Rede do Nosso Médico +","Hospital Albert Sabin","Hospital Portinari","Hospital Cruz Azul","Hospital Vidas","Hospital Sepaco","Hospital Dom Alvarenga"],
     labs: ["Ultracron (Barueri)","Diagmed (Campinas)","Unidades Notrelabs","Lab Hormon","Cura"],
-    cidades: ["Arujá, Barueri, Bertioga, Cabreúva, Caieiras, Cajamar, Campinas, Campo Limpo Paulista, Carapicuíba, Cotia, Cubatão, Diadema, Embu das Artes, Ferraz de Vasconcelos, Francisco Morato, Franco da Rocha, Guararema, Guarujá, Guarulhos, Hortolândia, Indaiatuba, Itanhaém, Itapecerica da Serra, Itapevi, Itaquaquecetuba, Itupeva, Jandira, Jariú, Jundiaí, Louveira, Mairiporã, Mauá, Mogi das Cruzes, Mongaguá, Osasco, Peruíbe, Poá, Praia Grande, Ribeirão Pires, Santa Isabel, Santana de Parnaíba, Santo André, Santos, São Bernardo do Campo, São Caetano do Sul, São Paulo, São Vicente, Sorocaba, Sumaré, Suzano, Taboão da Serra, Valinhos, Vargem Grande Paulista, Várzea Paulista, Vinhedo, Votorantim","Praças: São Paulo (Capital e RM), Campinas, Sorocaba e Jundiaí"],
-    ans: "508.022/26-3",
+    cidades: ["Arujá, Barueri, Bertioga, Cabreúva, Caieiras, Cajamar, Campinas, Campo Limpo Paulista, Carapicuíba, Cotia, Cubatão, Diadema, Embu das Artes, Ferraz de Vasconcelos, Francisco Morato, Franco da Rocha, Guararema, Guarujá, Guarulhos, Hortolândia, Indaiatuba, Itanhaém, Itapecerica da Serra, Itapevi, Itaquaquecetuba, Itupeva, Jandira, Jariú, Jundiaí, Louveira, Mairiporã, Mauá, Mogi das Cruzes, Mongaguá, Osasco, Peruíbe, Poá, Praia Grande, Ribeirão Pires, Santa Isabel, Santana de Parnaíba, Santo André, Santos, São Bernardo do Campo, São Caetano do Sul, São Paulo, São Vicente, Sorocaba, Sumaré, Suzano, Taboão da Serra, Valinhos, Vargem Grande Paulista, Várzea Paulista, Vinhedo, Votorantim"],
     extras: []
   },
   {
     nome: "Smart Prime",
-    preco: "R$ 165,93/mês*",
-    precoObs: "*Faixa 00-18 • Não MEI 2-29 vidas • compulsório c/ copay total",
-    tagline: "Cobertura nacional, com foco no atendimento em rede própria, presente nas 5 regiões do Brasil.",
+    tagline: "Cobertura nacional, presente nas 5 regiões do Brasil. 27 estados.",
     canais: ["SS","PME","CORP","LIC"],
     abran: "NACIONAL",
     mercado: "SS | PME",
     minVidas: "1 vida",
     carac: [
-      ["Abrangência","Nacional – 27 estados (AL, AM, AP, BA, CE, DF, ES, GO, MA, MG, MS, MT, PA, PB, PE, PI, PR, RJ, RN, RO, RS, SC, SE, SP, TO e outros)"],
       ["Segmentação","Ambulatorial + Hospitalar com Obstetrícia (AH | AHO)"],
       ["Acomodação","Enfermaria e Apartamento"],
       ["Atendimento","Rede Própria e Rede Credenciada"],
       ["Reembolso","NÃO possui reembolso"],
-      ["Coparticipação","Copay Total e Parcial | S/ Copay somente Corp"],
       ["Plano","Completo Ambulatorial, Hospitalar c/ Obstetrícia e Odonto (ROL ANS)"]
     ],
     difer: [
@@ -462,23 +465,19 @@ var PRODUTOS = [
     rede: ["Toda a Rede do Smart Flex +","Hospital IGESP Paulista","Hospital Santa Maria de Suzano","Hospital Novo Atibaia","Santa Casa de São José dos Campos","Santa Casa de Bragança","Casa de Saúde do Guarujá"],
     labs: ["Lavosier","Femme – Laboratório da Mulher","Laboratório Saluti"],
     cidades: ["Presente nas 5 regiões do Brasil, com 27 estados na abrangência"],
-    ans: "484.966/20-3",
     extras: []
   },
   {
     nome: "Smart 300",
-    preco: "Consulte a tabela",
-    precoObs: "Tabela de preços por praça — consulte o Planium",
     tagline: "Abrangência SP, RJ, MG e PR, com acomodação em enfermaria.",
     canais: ["SS","PME"],
     abran: "SP, RJ, MG, PR",
     mercado: "SS | PME",
     minVidas: "1 vida",
     carac: [
-      ["Abrangência","SP, RJ, MG e PR"],
       ["Segmentação","Ambulatorial + Hospitalar com Obstetrícia (AH | AHO)"],
       ["Acomodação","Enfermaria"],
-      ["Atendimento","Rede Própria e Rede Credenciada | *Pronto-socorro credenciado em horário diferenciado (18h–8h)"],
+      ["Atendimento","Rede Própria e Rede Credenciada | *Pronto-socorro credenciado (18h–8h)"],
       ["Comercialização","Americana, Campinas, Jundiaí, Sorocaba e Rio de Janeiro"],
       ["Plano","Completo Ambulatorial, Hospitalar c/ Obstetrícia e Odonto (ROL ANS)"]
     ],
@@ -489,20 +488,16 @@ var PRODUTOS = [
     rede: ["Rede Própria Hapvida NotreDame + Rede Credenciada (SP, RJ, MG e PR)"],
     labs: ["Unidades Notrelabs e rede credenciada das praças"],
     cidades: ["Comercialização e atendimento: Americana, Campinas, Jundiaí, Sorocaba e Rio de Janeiro"],
-    ans: "—",
     extras: []
   },
   {
     nome: "Smart 500",
-    preco: "Consulte a tabela",
-    precoObs: "Tabela de preços por praça — consulte o Planium",
     tagline: "Abrangência SP, RJ, MG, DF e PR, com enfermaria e apartamento.",
     canais: ["SS","PME"],
     abran: "SP, RJ, MG, DF, PR",
     mercado: "SS | PME",
     minVidas: "1 vida",
     carac: [
-      ["Abrangência","SP, RJ, MG, DF e PR"],
       ["Segmentação","Ambulatorial + Hospitalar com Obstetrícia (AH | AHO)"],
       ["Acomodação","Enfermaria e Apartamento"],
       ["Atendimento","Rede Própria e Rede Credenciada"],
@@ -516,20 +511,16 @@ var PRODUTOS = [
     rede: ["Rede Própria Hapvida NotreDame + Rede Credenciada (SP, RJ, MG, DF e PR)"],
     labs: ["Unidades Notrelabs e rede credenciada das praças"],
     cidades: ["Comercialização e atendimento: Americana, Campinas, Jundiaí, Sorocaba e Rio de Janeiro"],
-    ans: "—",
     extras: []
   },
   {
     nome: "Pleno Vale do Paraíba",
-    preco: "Consulte a tabela",
-    precoObs: "Tabela de preços por praça — consulte o Planium",
     tagline: "Abrangência regional no Vale do Paraíba, com rede própria e credenciada.",
     canais: ["SS","PME"],
     abran: "Regional (Vale do Paraíba)",
     mercado: "SS | PME",
     minVidas: "1 vida",
     carac: [
-      ["Abrangência","Regional – 15 municípios do Vale do Paraíba"],
       ["Segmentação","Ambulatorial + Hospitalar com Obstetrícia (AH | AHO)"],
       ["Acomodação","Enfermaria e Apartamento"],
       ["Atendimento","Rede Própria e Rede Credenciada"],
@@ -542,85 +533,67 @@ var PRODUTOS = [
     rede: ["Rede Própria Hapvida NotreDame + Rede Credenciada da região"],
     labs: ["Rede credenciada da região"],
     cidades: ["Abrangência: Caçapava, Campos do Jordão, Caraguatatuba, Guararema, Guaratinguetá, Igaratá, Jacareí, Lorena, Pindamonhangaba, Santa Branca, São José dos Campos, São Sebastião, Taubaté, Tremembé e Ubatuba"],
-    ans: "—",
     extras: []
   },
   {
     nome: "Advance 600",
-    preco: "R$ 193,00/mês*",
-    precoObs: "*Faixa 00-18 • Não MEI 2-29 vidas • compulsório c/ copay total",
-    tagline: "Mais liberdade de escolha e conveniência, com acesso à rede própria Hapvida NotreDame e credenciada ampliada.",
+    tagline: "Mais liberdade de escolha e conveniência, com acesso à rede própria e credenciada ampliada.",
     canais: ["SS","PME","CORP","ADES","LIC"],
     abran: "NACIONAL",
     mercado: "SS | PME",
     minVidas: "1 vida",
     carac: [
-      ["Abrangência","Nacional"],
       ["Segmentação","Ambulatorial + Hospitalar com Obstetrícia (AH | AHO)"],
       ["Acomodação","Enfermaria e Apartamento"],
       ["Coparticipação","Copay Total e Parcial | S/ Copay somente Corp"],
       ["Reembolso","7 dias • R$ 75,00/dia"],
-      ["Plano","Completo Ambulatorial, Hospitalar c/ Obstetrícia e Odonto (ROL ANS)"],
-      ["Rede Exclusiva","Unidades da linha Hapvida NotreDame Advance, estrutura moderna"]
+      ["Plano","Completo Ambulatorial, Hospitalar c/ Obstetrícia e Odonto (ROL ANS)"]
     ],
     difer: [
-      "Assistência médica de alto padrão, atendimento exclusivo e flexibilidade de acesso",
-      "Cobertura nacional com opção de reembolso",
-      "Melhoria das condições de reembolso e coparticipação no PPO (reembolso parcial = consultas | total = todos os procedimentos)",
-      "Vantagens na internação em Rede Própria (mediante convite): ala exclusiva, upgrade de acomodação (enfermaria → apartamento), estacionamento gratuito para a família, refeição para o acompanhante e concierge digital",
-      "Leitos dedicados em três hospitais de SP (Salvalus, São Bernardo do Campo e Bosque da Saúde)",
-      "Concierge: acompanhamento da jornada do beneficiário, da recepção até a alta",
-      "Verticalização Advance 600: 20,9%"
+      "Verticalização Advance 600: 20,9%",
+      "Leitos dedicados em 3 hospitais de SP (Salvalus, SBC e Bosque da Saúde)",
+      "Concierge: acompanhamento da jornada do beneficiário",
+      "Vantagens na internação Rede Própria: ala exclusiva, upgrade acomodação, estacionamento grátis, refeição acompanhante"
     ],
     rede: ["Toda a Rede do Smart Prime +","Hospital São Lucas (Rio)","Hospital Santa Paula","Hospital Nipo Brasileiro","Hospital São Luiz São Bernardo (Hosp. Assunção)","Hospital Christóvão da Gama","Hospital Portinari"],
     labs: ["Laboratório Notrelabs","Laboratório Lavoisier","Laboratório Tecnolob","Unidade Hapvida NotreDame Advance"],
-    cidades: ["Abrangência nacional • Tabelas de reembolso: SP, RJ, Jundiaí, Mogi das Cruzes, Santos e São Bernardo do Campo"],
-    ans: "474.439/15-0",
+    cidades: ["Abrangência nacional"],
     extras: [["Contratos",["A partir de 1 vida na proposta","Produtos mistos permitidos (ex.: Smart Up + Advance)"]]]
   },
   {
     nome: "Advance 700",
-    preco: "R$ 254,94/mês*",
-    precoObs: "*Faixa 00-18 • Não MEI 2-29 vidas • compulsório c/ copay total",
-    tagline: "Qualidade com abrangência nacional, acesso à Rede Exclusiva Advance e ampla rede própria e credenciada de prontos-socorros e hospitais de referência.",
+    tagline: "Abrangência nacional, acesso à Rede Exclusiva Advance e ampla rede própria e credenciada.",
     canais: ["SS","PME","CORP","ADES","LIC"],
     abran: "NACIONAL",
     mercado: "SS | PME",
     minVidas: "1 vida",
     carac: [
-      ["Abrangência","Nacional"],
       ["Segmentação","Ambulatorial + Hospitalar com Obstetrícia (AH | AHO)"],
       ["Acomodação","Enfermaria e Apartamento"],
       ["Coparticipação","Copay Total e Parcial | S/ Copay somente Corp"],
       ["Reembolso","7 dias • R$ 96,00/dia"],
-      ["Plano","Completo Ambulatorial, Hospitalar c/ Obstetrícia e Odonto (ROL ANS)"],
-      ["Rede Exclusiva","Rede Advance com unidades próprias e integradas"]
+      ["Plano","Completo Ambulatorial, Hospitalar c/ Obstetrícia e Odonto (ROL ANS)"]
     ],
     difer: [
       "Livre Escolha",
-      "Rede própria e credenciada de excelência, com ampla cobertura assistencial",
+      "Rede própria e credenciada de excelência",
       "Coberturas adicionais ao Rol da ANS",
-      "Melhoria das condições de reembolso e coparticipação no PPO",
-      "Advance 700: o convite para a Rede Própria pode ocorrer somente quando não há justificativa médica para internação na Rede Credenciada",
-      "832 unidades próprias e integradas nas cinco regiões brasileiras"
+      "832 unidades próprias e integradas nas 5 regiões brasileiras",
+      "Convite para Rede Própria somente quando não há justificativa médica para Rede Credenciada"
     ],
     rede: ["Toda a Rede do Advance 600 +","Hospital Beneficiência Portuguesa de SP","Hospital São Camilo (Pompéia)","Hospital São Camilo (Santana)","Hospital São Camilo (Ipiranga)","Hospital Nipo Brasileiro","Hospital Leforte","Hospital Ana Costa","Hospital Pasteur (Rio)","Hospital Badim (Rio)","Unidade Advance"],
     labs: ["Laboratório Lavoisier","Laboratório Sérgio Franco","Femme","Centro de Genomas","Lab Clínico Raul Dias dos Santos","CDB"],
-    cidades: ["Abrangência nacional • Tabelas de reembolso: SP, RJ, Jundiaí, Mogi das Cruzes, Santos e São Bernardo do Campo"],
-    ans: "474.341/15-5",
+    cidades: ["Abrangência nacional"],
     extras: [["Contratos",["A partir de 1 vida na proposta","Produtos mistos permitidos"]]]
   },
   {
     nome: "Premium 900 Care",
-    preco: "R$ 392,08/mês*",
-    precoObs: "*Faixa 00-18 • Não MEI 2-29 vidas • compulsório c/ copay total",
-    tagline: "Para quem busca um cuidado superior, com benefícios e atenção em cada detalhe.",
+    tagline: "Cuidado superior, com assistência de viagem internacional e programa de imunização. Sem rede D'Or.",
     canais: ["SS","PME","CORP","ADES","LIC"],
     abran: "NACIONAL",
     mercado: "SS | PME",
     minVidas: "2 vidas",
     carac: [
-      ["Abrangência","Nacional"],
       ["Segmentação","Ambulatorial + Hospitalar com Obstetrícia (AH | AHO)"],
       ["Acomodação","Enfermaria e Apartamento"],
       ["Coparticipação","Copay Total e Parcial | S/ Copay somente Corp"],
@@ -635,26 +608,22 @@ var PRODUTOS = [
       "Coleta domiciliar",
       "Aconselhamento telefônico em saúde",
       "Ala privativa para o atendimento oncológico",
-      "Reembolso com valores diferenciados no Brasil e no exterior",
-      "832 unidades próprias e integradas nas cinco regiões brasileiras"
+      "Reembolso diferenciado Brasil e exterior",
+      "832 unidades próprias e integradas nas 5 regiões"
     ],
     rede: ["Toda a Rede do Advance 700 +","Hospital Oswaldo Cruz","Maternidade Santa Joana","Hospital 9 de Julho","Hospital Santa Catarina","Hospital Samaritano","Hospital Rios D'Or","Unidade Advance"],
     labs: ["Laboratório Delboni","Laboratório CDB","A+","Salomão e Zoppi"],
-    cidades: ["Abrangência nacional • Tabelas de reembolso: SP, RJ, Jundiaí, Mogi das Cruzes, Santos e São Bernardo do Campo"],
-    ans: "476.795/16-1",
-    extras: [["Contratos",["A partir de 2 vidas na proposta","Sem rede D'Or (diferencial de tabela vs. Premium 900.1)","Produtos mistos permitidos"]]]
+    cidades: ["Abrangência nacional"],
+    extras: [["Contratos",["A partir de 2 vidas na proposta","Sem rede D'Or (diferencial vs. Premium 900.1)","Produtos mistos permitidos"]]]
   },
   {
     nome: "Premium 900.1",
-    preco: "R$ 413,88/mês*",
-    precoObs: "*Faixa 00-18 • Não MEI 2-29 vidas • compulsório c/ copay total",
-    tagline: "Para quem deseja um cuidado com benefícios e atenção em cada detalhe, com a rede D'Or.",
+    tagline: "Cuidado superior com a rede D'Or. Assistência de viagem e programa de imunização.",
     canais: ["SS","PME","CORP","ADES","LIC"],
     abran: "NACIONAL",
     mercado: "SS | PME",
     minVidas: "3 vidas",
     carac: [
-      ["Abrangência","Nacional"],
       ["Segmentação","Ambulatorial + Hospitalar com Obstetrícia (AH | AHO)"],
       ["Acomodação","Enfermaria e Apartamento"],
       ["Coparticipação","Copay Total e Parcial | S/ Copay somente Corp"],
@@ -668,52 +637,43 @@ var PRODUTOS = [
       "Livre Escolha",
       "Coleta domiciliar",
       "Aconselhamento telefônico em saúde",
-      "Vendas a partir de 5 vidas (PME) — regra do Guia de Produtos",
-      "832 unidades próprias e integradas nas cinco regiões brasileiras"
+      "Vendas a partir de 5 vidas (PME)",
+      "832 unidades próprias e integradas nas 5 regiões"
     ],
     rede: ["Toda a Rede do Premium 900 Care +","Hospital São Luiz (Morumbi)","Hospital Brasil","Hospital São Luiz (Itaim)","Hospital São Luiz (Anália Franco)","Hospital São Luiz (Guarulhos)","Hospital São Luiz (Alphaville)","Hospital Infantil Sabará","Unidade Advance"],
     labs: ["Laboratório Delboni","Laboratório CDB","A+","Salomão e Zoppi"],
-    cidades: ["Abrangência nacional • Tabelas de reembolso: SP, RJ, Jundiaí, Mogi das Cruzes, Santos e São Bernardo do Campo"],
-    ans: "474.424/15-1",
-    extras: [["Contratos",["A partir de 3 vidas na proposta (a partir de 2 no Premium 900 Care)","Produtos mistos permitidos","Prefeitura de prestador de serviço e agregados NÃO aceita nesta linha"]]]
+    cidades: ["Abrangência nacional"],
+    extras: [["Contratos",["A partir de 3 vidas na proposta","Produtos mistos permitidos","Prefeitura de prestador de serviço e agregados NÃO aceita nesta linha"]]]
   },
   {
     nome: "Infinity 1000.11",
-    preco: "R$ 742,73/mês*",
-    precoObs: "*Faixa 00-18 • Não MEI 2-29 vidas • compulsório c/ copay total",
-    tagline: "A linha mais completa e sofisticada Hapvida NotreDame, unindo abrangência, exclusividade e excelência em saúde.",
+    tagline: "A linha mais completa e sofisticada, unindo abrangência, exclusividade e excelência em saúde.",
     canais: ["PME","CORP","ADES","LIC"],
     abran: "NACIONAL",
     mercado: "SS | PME",
     minVidas: "5 vidas",
     carac: [
-      ["Abrangência","Nacional"],
       ["Segmentação","Ambulatorial + Hospitalar com Obstetrícia (AH | AHO)"],
       ["Acomodação","Enfermaria e Apartamento"],
       ["Coparticipação","Copay Total e Parcial | S/ Copay somente Corp"],
       ["Reembolso","3 dias • R$ 400,00/dia"],
-      ["Rede","Rede ampla e exclusiva de hospitais, centros de diagnóstico e laboratórios"],
       ["Plano","Ambulatorial, Hospitalar c/ Obstetrícia e Assistência Odontológica completa (ROL ANS)"]
     ],
     difer: [
       "Assistência de Viagem Internacional",
       "Livre Escolha",
       "Assistência Odontológica completa",
-      "Reembolso (3 dias) de R$ 400,00",
       "Coleta domiciliar",
       "Serviço Concierge",
       "Vacinas a domicílio",
       "Aconselhamento médico",
       "Check-up disponível apenas para titulares",
-      "Retaguarda",
-      "Melhoria das condições de reembolso e coparticipação no PPO",
-      "Ala privativa para o atendimento oncológico",
-      "832 unidades próprias e integradas nas cinco regiões brasileiras"
+      "Ala privativa para atendimento oncológico",
+      "832 unidades próprias e integradas nas 5 regiões"
     ],
     rede: ["Toda a Rede do Premium 900 +","Hospital Albert Einstein","Hospital Sírio-Libanês","Maternidade São Luiz Star","Hospital BP Mirante","Maternidade Pro Matre","Hospital Infantil Sabará","Hospital Copa Star (Rio)"],
     labs: ["Laboratório Fleury (SP)","Alta Diagnósticos","Unidade Advance"],
-    cidades: ["Abrangência nacional • Tabelas de reembolso: SP, RJ, Jundiaí, Mogi das Cruzes, Santos e São Bernardo do Campo"],
-    ans: "482.848/19-8",
+    cidades: ["Abrangência nacional"],
     extras: [["Contratos",["A partir de 5 vidas na proposta (produtos mistos)","Check-up apenas para titulares do Infinity"]],["Contatos",["Concierge da Unidade (agendamento): (11) 95649-0785","Dúvidas e autorização de procedimentos: (11) 98515-5856"]]]
   }
 ];
@@ -721,6 +681,7 @@ var PRODUTOS = [
 var OFERTA = [
   ["Nosso Médico",[1,1,1,1,1,1],"1 vida (PF)","Grupo de Municípios"],
   ["Smart Up",[1,1,1,1,1,1],"1 vida (PF)","Grupo de Municípios"],
+  ["Smart Up Ambulatorial",[1,0,0,0,0,0],"1 vida (PF)","SP e RJ"],
   ["Smart Flex SP",[0,1,1,1,1,1],"1 vida","Grupo de Municípios"],
   ["Smart Prime",[0,1,1,1,0,1],"1 vida","NACIONAL"],
   ["Smart 300",[0,1,1,0,0,0],"1 vida","SP, RJ, MG, PR"],
@@ -732,8 +693,8 @@ var OFERTA = [
   ["Premium 900.1",[0,1,1,1,1,1],"3 vidas","NACIONAL"],
   ["Infinity 1000.11",[0,0,1,1,1,1],"5 vidas","NACIONAL"]
 ];
-var COLS = ["IND","SS","PME","CORP","ADES","LIC"];
 
+var COLS = ["IND","SS","PME","CORP","ADES","LIC"];
 var PRODUTO_ATUAL = null;
 var ABA_ATUAL = 0;
 
@@ -764,32 +725,13 @@ function renderTabela() {
   b.innerHTML = h;
 }
 
-function esc(s) {
-  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-}
-
-function listaUl(arr) {
-  var h = '<ul class="lista">';
-  for (var i = 0; i < arr.length; i++) h += '<li>' + arr[i] + '</li>';
-  return h + '</ul>';
-}
-
-function abasProduto(p) {
-  return [
-    { nome: "Visão Geral", corpo: visaoGeral(p) },
-    { nome: "Rede de Hospitais", corpo: '<h3 style="font-size:12.5px;text-transform:uppercase;letter-spacing:.5px;color:#007b3d;margin-bottom:8px;">Destaques de Rede</h3>' + listaUl(p.rede) + (p.redeObs ? '<div class="aviso">' + p.redeObs + '</div>' : '') },
-    { nome: "Laboratórios", corpo: '<h3 style="font-size:12.5px;text-transform:uppercase;letter-spacing:.5px;color:#007b3d;margin-bottom:8px;">Laboratórios e Diagnóstico</h3>' + listaUl(p.labs) },
-    { nome: "Cidades & ANS", corpo: '<h3 style="font-size:12.5px;text-transform:uppercase;letter-spacing:.5px;color:#007b3d;margin-bottom:8px;">Área de Atendimento</h3>' + listaUl(p.cidades) + '<div class="aviso azul">Registro ANS ' + p.ans + '. ' + p.precoObs + '. Tabela de preços sujeita a alteração.</div>' }
-  ];
-}
-
 function visaoGeral(p) {
   var h = '<div class="grid-2">';
-  h += '<div class="bloco"><h4>Características</h4><table class="mini-tab">';
+  h += '<div class="bloco"><h4>Características</h4><ul class="lista">';
   for (var i = 0; i < p.carac.length; i++) {
-    h += '<tr><td>' + p.carac[i][0] + '</td><td>' + p.carac[i][1] + '</td></tr>';
+    h += '<li><b>' + p.carac[i][0] + ':</b> ' + p.carac[i][1] + '</li>';
   }
-  h += '</table></div>';
+  h += '</ul></div>';
   h += '<div class="bloco"><h4>Diferenciais</h4>' + listaUl(p.difer) + '</div></div>';
   if (p.extras && p.extras.length) {
     h += '<div class="grid-2" style="margin-top:14px;">';
@@ -802,6 +744,15 @@ function visaoGeral(p) {
   return h;
 }
 
+function abasProduto(p) {
+  return [
+    { nome: "Visão Geral", corpo: visaoGeral(p) },
+    { nome: "Rede de Hospitais", corpo: '<h3 style="font-size:12.5px;text-transform:uppercase;letter-spacing:.5px;color:#007b3d;margin-bottom:8px;">Destaques de Rede</h3>' + listaUl(p.rede) },
+    { nome: "Laboratórios", corpo: '<h3 style="font-size:12.5px;text-transform:uppercase;letter-spacing:.5px;color:#007b3d;margin-bottom:8px;">Laboratórios e Diagnóstico</h3>' + listaUl(p.labs) },
+    { nome: "Cidades", corpo: '<h3 style="font-size:12.5px;text-transform:uppercase;letter-spacing:.5px;color:#007b3d;margin-bottom:8px;">Área de Atendimento</h3>' + listaUl(p.cidades) }
+  ];
+}
+
 function showProduto(i) {
   PRODUTO_ATUAL = i;
   ABA_ATUAL = 0;
@@ -810,7 +761,6 @@ function showProduto(i) {
   painel.classList.add("aberto");
   document.getElementById("pNome").textContent = p.nome;
   document.getElementById("pTagline").textContent = p.tagline;
-  document.getElementById("pPreco").innerHTML = p.preco + '<small>' + p.precoObs + '</small>';
   var btns = document.getElementsByClassName("btn-prod");
   for (var b = 0; b < btns.length; b++) btns[b].classList.remove("ativo");
   var ativo = document.getElementById("bt" + i);
