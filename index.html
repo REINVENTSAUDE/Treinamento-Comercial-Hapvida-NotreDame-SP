@@ -42,6 +42,9 @@
   .aba.on { background: var(--verde); border-color: var(--verde); color: #fff; }
   .aba-corpo { padding: 18px 22px 22px; }
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .grid-3 > .bloco { background: #fffde8; border-color: #f0e6a0; }
+  .grid-3 > .bloco h4 { color: #1f2d3d; }
   .bloco { background: #f7fafd; border: 1px solid var(--borda); border-radius: 10px; padding: 12px 14px; }
   .bloco h4 { font-size: 12px; text-transform: uppercase; letter-spacing: .5px; color: var(--verde-esc); margin-bottom: 6px; }
   ul.lista { margin: 0; padding: 0 0 0 20px; font-size: 13.5px; line-height: 1.75; }
@@ -162,26 +165,87 @@
   <details class="acc">
     <summary>3.2 • Carência PF/SS (cópia e redução)</summary>
     <div class="corpo">
-      <h4>Operadora de origem Hapvida (cópia de carência)</h4>
+      <h4>Operadora de origem Hapvida (cópia)</h4>
       <ul class="lista">
-        <li>Aproveitamento de <b>100%</b> do tempo (exceto parto, CPT e terapias): a partir de 01 ano de contrato.</li>
-        <li>Aproveitamento de <b>50%</b> (exceto parto, CPT e terapias): de 180 dias até 01 ano de contrato.</li>
-        <li><b>Redução de 30 dias</b> (exceto parto, CPT e terapias): de 30 até 179 dias de contrato.</li>
-        <li>Aproveitamento até 30 dias após o cancelamento, cliente adimplente. Não soma tempos entre operadoras — vale o último plano ativo.</li>
+        <li>Exceto de PF para PF;</li>
+        <li>Todo o tempo de carências cumprido no plano anterior Hapvida (regulamentado) será aproveitado no novo plano;</li>
+        <li>OBS: As carências serão aplicadas apenas aos benefícios que o cliente não possuía anteriormente (segmentação, rede e acomodação novas).</li>
       </ul>
-      <h4>Outra operadora (redução)</h4>
+      <div class="grid-3" style="margin-top:14px;">
+        <div class="bloco">
+          <h4>Beneficiário possuí 113 dias de plano</h4>
+          <ul class="lista">
+            <li>Aproveitamento de <b>113 dias</b></li>
+            <li>Inclusive de parto, CPT e terapias.</li>
+          </ul>
+        </div>
+        <div class="bloco">
+          <h4>Beneficiário possuí 300 dias de plano</h4>
+          <ul class="lista">
+            <li>Aproveitamento de <b>300 dias</b></li>
+            <li>Inclusive de parto, CPT e terapias.</li>
+          </ul>
+        </div>
+        <div class="bloco">
+          <h4>Beneficiário possuí 1310 dias de plano</h4>
+          <ul class="lista">
+            <li>Aproveitamento de <b>1310 dias</b></li>
+            <li>Inclusive de parto, CPT e terapias.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4 style="margin-top:18px;">Outra operadora (redução)</h4>
       <ul class="lista">
-        <li>Redução com base no tempo cumprido no plano anterior, exceto de PF para PF.</li>
-        <li>Carências aplicadas apenas aos benefícios que o cliente não possuía (segmentação, rede e acomodação novas).</li>
-        <li>Idade limite para redução: até <b>65 anos no PF</b> e <b>64 anos no SS</b>. Confirmar lista de operadoras congêneres.</li>
+        <li>Idade limite para redução: até <b>65 anos no PF</b> e <b>64 anos no SS</b>;</li>
+        <li>Confirmar a lista de operadoras congêneres;</li>
+        <li>Não realizamos a soma do tempo de permanência entre operadoras. Para análise, é considerado apenas o tempo do último plano ativo.</li>
       </ul>
-      <h4>Documentação da carência</h4>
-      <ul class="lista">
-        <li>Opção 01: Carta de Permanência, Carteirinha ou Comprova ANS.</li>
-        <li>Opção 02: Carta de Portabilidade (vindo de outra operadora).</li>
-        <li>Opcionais: 2 últimos boletos com comprovantes, Carta de Adimplência ou 2 últimos holerites com desconto do plano.</li>
-      </ul>
-      <div class="aviso">⭐ <b>Cópia de Carência Especial 2026 – válida ATÉ 31/08/2026:</b> cópia incluindo parto e CPT, exceto terapias; até 74 anos; comissão normal. Exigências: segmentação assistencial, rede de prestadores, acomodação e cobertura de procedimentos equivalentes ou superiores.</div>
+      <div class="grid-3" style="margin-top:14px;">
+        <div class="bloco">
+          <h4>A partir de 01 ano de contrato</h4>
+          <ul class="lista">
+            <li>Aproveitamento de <b>100%</b></li>
+            <li>Com exceção de parto, CPT e terapias.</li>
+          </ul>
+        </div>
+        <div class="bloco">
+          <h4>De 180 dias até 01 ano de contrato</h4>
+          <ul class="lista">
+            <li>Aproveitamento de <b>50%</b></li>
+            <li>Com exceção de parto, CPT e terapias.</li>
+          </ul>
+        </div>
+        <div class="bloco">
+          <h4>De 30 até 179 dias de contrato</h4>
+          <ul class="lista">
+            <li>Redução de <b>30 dias</b></li>
+            <li>Com exceção de parto, CPT e terapias.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h4 style="margin-top:18px;">Documentação da carência</h4>
+      <details class="acc" style="margin-top:10px;">
+        <summary>Demais empresas (ME, EPP, LTDA, SIMPLES NACIONAL...)</summary>
+        <div class="corpo">
+          <p><b>Não é necessário comprovar adimplência.</b></p>
+          <ul class="lista">
+            <li><b>OPÇÃO 01:</b> Carta de Permanência ou Carteirinha ou Comprova ANS;</li>
+            <li><b>OPÇÃO 02:</b> Carta de Portabilidade.</li>
+          </ul>
+        </div>
+      </details>
+      <details class="acc" style="margin-bottom:0;">
+        <summary>Nova Proposta PF e Empresa contratante MEI</summary>
+        <div class="corpo">
+          <p><b>É necessário comprovar adimplência.</b></p>
+          <ul class="lista">
+            <li><b>OPÇÃO 01:</b> Carta de Permanência ou Carteirinha ou Comprova ANS; + 2 Últimos boletos com comprovantes ou Carta de Adimplência ou 2 Últimos holerites com o desconto do plano de saúde;</li>
+            <li><b>OPÇÃO 02:</b> Carta de Portabilidade.</li>
+          </ul>
+        </div>
+      </details>
     </div>
   </details>
 
@@ -374,7 +438,7 @@ var PRODUTOS = [
     nome: "Smart Up",
     tagline: "Atende em mais de 40 cidades! Rede Própria e Rede Credenciada, com mais 4 prestadores de urgência e emergência.",
     canais: ["IND","SS","PME","CORP","ADES","LIC"],
-    abran: "Grupo de Municípios",
+    abran: "Grupo de Municípios + RJ",
     mercado: "PF | SS | PME",
     minVidas: "1 vida (PF)",
     carac: [
