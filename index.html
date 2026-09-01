@@ -567,6 +567,7 @@
     <div id="quizBox"></div>
     <button class="btn azul" onclick="corrigirQuiz()" style="margin-top:6px;">Corrigir Quiz</button>
     <button class="btn" onclick="limparQuiz()" style="margin-top:6px;">Refazer</button>
+    <button class="btn" onclick="renderQuiz()" style="margin-top:6px;">Gerar novas perguntas</button>
     <div class="resultado" id="quizResultado"></div>
   </div>
 </details>
@@ -1121,7 +1122,12 @@ function corrigirQuiz() {
 }
 
 function limparQuiz() {
-  renderQuiz();
+  for (var i = 0; i < QUIZ.length; i++) {
+    var el = document.getElementById("qq" + i);
+    if (el) el.classList.remove("certo", "errado");
+    var radios = document.getElementsByName("q" + i);
+    for (var a = 0; a < radios.length; a++) radios[a].checked = false;
+  }
   document.getElementById("quizResultado").innerHTML = "";
 }
 
