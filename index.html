@@ -1026,7 +1026,7 @@ function showAba(a) {
   renderAbas(PRODUTO_ATUAL);
 }
 
-var QUIZ = [
+var QUIZ_TOTAL = [
   { q: "Qual produto é o único com foco em Medicina da Família, com até 3 dias úteis para consulta?", o: ["Advance 700","Nosso Médico","Smart Flex","Infinity 1000.11"], c: 1, r: "Nosso Médico — médicos de família com acompanhamento dedicado (presencial e online)." },
   { q: "Qual produto NÃO possui reembolso?", o: ["Advance 600","Premium 900 Care","Smart Prime","Infinity 1000.11"], c: 2, r: "Smart Prime — cobertura nacional do varejo, sem reembolso." },
   { q: "A partir de quantas vidas o Infinity 1000.11 é comercializado?", o: ["1 vida","2 vidas","3 vidas","5 vidas"], c: 3, r: "5 vidas na proposta (produtos mistos)." },
@@ -1036,12 +1036,48 @@ var QUIZ = [
   { q: "A Cópia de Carência Especial 2026 é válida até quando e até qual idade?", o: ["31/08/2026 • até 74 anos","31/12/2026 • até 64 anos","30/09/2026 • até 65 anos","31/08/2026 • até 59 anos"], c: 0, r: "Até 31/08/2026, até 74 anos, incluindo parto e CPT (exceto terapias), comissão normal." },
   { q: "Qual faixa de aceitação de agregados (pai/mãe, irmãos, sogros etc.) em Premium 900.1 e Infinity?", o: ["Até 74 anos","Até 53 anos","Não aceitam agregados","Até 60 anos"], c: 2, r: "Premium 900.1 e Infinity não aceitam agregados (X). Prestador de serviço também não é aceito nessas linhas." },
   { q: "Carência do Odonto Premium: urgência/emergência e endodontia/prótese.", o: ["24 horas • 180 dias","24 horas • 90 dias","60 dias • 180 dias","30 dias • 120 dias"], c: 0, r: "Urgência/Emergência 24h; endodontia, prótese e cirurgia 180 dias." },
-  { q: "Em quais internações o copay é ISENTO nos produtos SS/PME?", o: ["Em qualquer hospital credenciado","Somente em rede própria","Nunca","Somente no Infinity"], c: 1, r: "Internação na Rede Própria é isenta de copay (SS/PME)." },
+  { q: "Em quais internações o copay é ISENTO nos produtos SS/PME?", o: ["Em qualquer hospital credenciado","Somente em rede própria","Nunca","Somente no Infinity"], c: 1, r: "Internação na Rede Própria é isenta de copay (PF/SS/PME)." },
   { q: "Quantas unidades próprias e integradas a Hapvida NotreDame contabiliza nas 5 regiões?", o: ["832","512","310","1.024"], c: 0, r: "832 unidades próprias e integradas — reforço para as linhas Advance, Premium e Infinity." },
-  { q: "Taxa de implantação SS/PME e produtos PF:", o: ["R$ 25 por proposta • PF sem taxa","R$ 50 por proposta • PF R$ 25","Sem taxa nos dois","R$ 25 por vida • PF sem taxa"], c: 0, r: "SS/PME: R$ 25,00 por proposta (ex.: Unidade Avançada Brigadeiro). PF: sem taxa de implantação." }
+  { q: "Taxa de implantação SS/PME e produtos PF:", o: ["R$ 25 por proposta • PF sem taxa","R$ 50 por proposta • PF R$ 25","Sem taxa nos dois","R$ 25 por vida • PF sem taxa"], c: 0, r: "SS/PME: R$ 25,00 por proposta. PF: sem taxa de implantação." },
+  { q: "Qual o prazo de reembolso do Premium 900.1 e 900 Care?", o: ["7 dias","5 dias","3 dias","10 dias"], c: 1, r: "5 dias • R$ 240,00/dia para Premium 900.1 e 900 Care." },
+  { q: "O Smart Prime possui cobertura em quantos estados brasileiros?", o: ["15 estados","20 estados","27 estados","Nacional (todos os estados)"], c: 2, r: "27 estados, presente nas 5 regiões do Brasil." },
+  { q: "Smart Up Ambulatorial NÃO tem cobertura de:", o: ["Consultas e exames","Terapias","Atendimento Hospitalar","Urgência/Emergência"], c: 2, r: "Smart Up Ambulatorial: U/E 24h, consultas, exames, cirurgias ambulatoriais e terapias — NÃO tem atendimento hospitalar." },
+  { q: "Idade limite para aceitação de cônjuge (dependente) na maioria dos produtos:", o: ["53 anos","65 anos","74 anos","80 anos"], c: 2, r: "74 anos para cônjuge dependente em todos os produtos." },
+  { q: "Filhos solteiros, adotivos e enteados têm idade limite de:", o: ["53 anos","65 anos","74 anos","18 anos"], c: 0, r: "53 anos para filhos solteiros, adotivos e enteados." },
+  { q: "O que é compulsory no plano PME?", o: ["Apenas os sócios","100% dos sócios e 100% dos funcionários titulares com vínculo ativo","Só funcionários CLT","Apenas o dono da empresa"], c: 1, r: "100% dos sócios e 100% dos funcionários titulares com vínculo empregatício ativo (registrados no e-Social)." },
+  { q: "Para encampação PME, qual a permanência mínima no plano anterior?", o: ["6 meses","12 meses","24 meses","Não há mínimo"], c: 1, r: "Permanência mínima de 12 meses no plano anterior, sem acréscimos ou exclusões." },
+  { q: "Intervalo máximo entre a rescisão do contrato anterior e o protocolo da nova proposta (encampação):", o: ["15 dias","30 dias corridos","60 dias","90 dias"], c: 1, r: "Intervalo máximo de 30 dias corridos entre a rescisão e o protocolo da nova proposta." },
+  { q: "Smart Flex SP NÃO tem abrangência em:", o: ["São Paulo","Rio de Janeiro","Campinas","Sorocaba"], c: 1, r: "Smart Flex não tem abrangência no Rio de Janeiro." },
+  { q: "A carência do Odonto Premium para consulta inicial, prevenção e radiologia é de:", o: ["24 horas","60 dias","90 dias","180 dias"], c: 1, r: "60 dias para consulta inicial, prevenção, radiologia, odontopediatria, odontologia clínica e periodontia." },
+  { q: "Reembolso do Infinity 1000.11: prazo e limite diário:", o: ["7 dias • R$ 96,00","5 dias • R$ 240,00","3 dias • R$ 400,00","10 dias • R$ 500,00"], c: 2, r: "3 dias • R$ 400,00/dia para Infinity 1000.11." },
+  { q: "Movimentação de aceitação entre 65 e 74 anos:", o: ["1%","5%","10%","Não aceita"], c: 1, r: "5% de aceitação entre 65 e 74 anos; 1% a partir de 75 anos." },
+  { q: "Smart 300 tem abrangência em quais estados?", o: ["SP e RJ","SP, RJ, MG e PR","SP, RJ, MG, DF e PR","Nacional"], c: 1, r: "Smart 300: SP, RJ, MG e PR, com acomodação em enfermaria." },
+  { q: "Para prestador de serviço e convívio marital, qual a assinatura necessária?", o: ["Apenas CPF","GOV, digital ou reconhecimento de firma em cartório","Certidão de nascimento","Comprovante de residência"], c: 1, r: "Assinatura pelo GOV, Digital ou Reconhecimento de firma em cartório. Filhos em comum não comprovam vínculo." },
+  { q: "Pleno Vale do Paraíba tem abrangência em quantos municípios?", o: ["5 municípios","10 municípios","15 municípios","20 municípios"], c: 2, r: "15 municípios: Caçapava, Campos do Jordão, Caraguatatuba, Guararema, Guaratinguetá, Igaratá, Jacareí, Lorena, Pindamonhangaba, Santa Branca, São José dos Campos, São Sebastião, Taubaté, Tremembé e Ubatuba." },
+  { q: "Smart Up atende em quantas cidades no total (SP + RJ)?", o: ["Mais de 30 cidades","Mais de 40 cidades","Mais de 50 cidades","Mais de 60 cidades"], c: 1, r: "Mais de 40 cidades! Smart UP SP e Smart RIO." },
+  { q: "Qual produto tem como diferencial o Concierge Digital, ala exclusiva e leitos dedicados em 3 hospitais de SP?", o: ["Smart Prime","Advance 600","Premium 900.1","Infinity 1000.11"], c: 1, r: "Advance 600: Concierge, ala exclusiva, upgrade de acomodação, estacionamento grátis e refeição para acompanhante na Rede Própria." },
+  { q: "Vendedor(a) preenche a Declaração de Saúde no momento de:", o: ["Após a venda","No momento de subir a venda no Portal","Depois do 1º boleto","Não é necessário"], c: 1, r: "Declaração de Saúde: o(a) vendedor(a) irá preencher a DS do cliente no momento de subir a venda." },
+  { q: "Qual o prazo de reembolso do Advance 600?", o: ["3 dias","5 dias","7 dias","10 dias"], c: 2, r: "7 dias • R$ 75,00/dia para Advance 600." },
+  { q: "Smart 500 tem abrangência em quais estados?", o: ["SP, RJ, MG","SP, RJ, MG e PR","SP, RJ, MG, DF e PR","Nacional"], c: 2, r: "Smart 500: SP, RJ, MG, DF e PR, com enfermaria e apartamento." },
+  { q: "A Rede Própria da Hapvida NotreDame conta com quantos hospitais em São Paulo?", o: ["5 hospitais","8 hospitais","11 hospitais","15 hospitais"], c: 2, r: "11 hospitais próprios em SP: Bosque da Saúde, Nossa Senhora do Rosário, Salvalus, Keila Ferreira, Frei Galvão, Santana Mogi, Notrecare ABC, Jardim Anália Franco, Cruzeiro do Sul, Nova Vida e São Bernardo." },
+  { q: "Produtos mistos são permitidos em quais linhas?", o: ["Apenas Smart e Advance","Advance, Premium e Infinity com Smart Up, Flex, Prime e Nosso Médico","Apenas PF","Não existe produto misto"], c: 1, r: "Advance, Premium e Infinity podem ser misturados com Nosso Médico, Smart Up, Smart Flex e Smart Prime." },
+  { q: "1º boleto do plano PF é adquirido por qual canal?", o: ["Portal do Vendedor","Portal da Corretora","Portal do Cliente","App de Vendas"], c: 2, r: "1º boleto somente pelo Portal do Cliente." }
 ];
 
+var QUIZ = [];
+var NUM_PERGUNTAS = 10;
+
+function sortearQuiz() {
+  var pool = QUIZ_TOTAL.slice();
+  QUIZ = [];
+  for (var i = 0; i < NUM_PERGUNTAS && pool.length > 0; i++) {
+    var idx = Math.floor(Math.random() * pool.length);
+    QUIZ.push(pool.splice(idx, 1)[0]);
+  }
+}
+
 function renderQuiz() {
+  sortearQuiz();
   var box = document.getElementById("quizBox");
   var h = "";
   for (var i = 0; i < QUIZ.length; i++) {
@@ -1085,12 +1121,7 @@ function corrigirQuiz() {
 }
 
 function limparQuiz() {
-  for (var i = 0; i < QUIZ.length; i++) {
-    var el = document.getElementById("qq" + i);
-    if (el) el.classList.remove("certo", "errado");
-    var radios = document.getElementsByName("q" + i);
-    for (var a = 0; a < radios.length; a++) radios[a].checked = false;
-  }
+  renderQuiz();
   document.getElementById("quizResultado").innerHTML = "";
 }
 
