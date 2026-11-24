@@ -55,6 +55,14 @@
   .aviso.novo-aviso { background: #fdf0e3; border-color: #f0c596; color: #8a4b12; }
   .bloco.novo-bloco { background: #fdf3e7; border-color: #f0c596; }
   .bloco.novo-bloco h4 { color: #d35400; }
+  .link-ul a { display: block; text-decoration: none; color: var(--texto); font-size: 12.5px; padding: 7px 10px; border-radius: 8px; border: 1px solid var(--borda); margin-bottom: 6px; background: #fbfdfe; transition: .12s; }
+  .link-ul a:hover { border-color: var(--verde); background: #f0faf5; color: var(--verde-esc); }
+  .link-ul .doc-tipo { float: right; font-weight: 800; font-size: 10px; color: #fff; background: var(--azul); border-radius: 20px; padding: 2px 8px; }
+  .link-ul .doc-tipo.pdf { background: #e74c3c; }
+  .link-ul .doc-tipo.docx { background: #2b7de9; }
+  .link-ul .doc-tipo.pptx { background: #d35400; }
+  .link-ul .doc-tipo.md { background: #6c7a89; }
+  .link-ul .doc-tipo.html { background: var(--verde); }
   .tabela { width: 100%; border-collapse: collapse; font-size: 12.5px; }
   .tabela th { background: var(--azul-esc); color: #fff; padding: 8px 10px; text-align: left; white-space: nowrap; }
   .tabela td { padding: 7px 10px; border-bottom: 1px solid var(--borda); }
@@ -112,17 +120,20 @@
   <img src="Logo.png" alt="Logo" onerror="this.style.display='none'">
   <div style="flex:1;min-width:240px;">
     <h1>Treinamento Comercial – Hapvida NotreDame SP</h1>
-    <div class="sub">Portfólio de produtos e regras comerciais • PF | SS | PME • Base: Treinamento do Corretor (08.2026)</div>
+    <div class="sub">Portfólio de produtos e regras comerciais • PF | SS | PME • Base: Treinamento do Corretor (08.2026) • Atualizado em 23/11/2026</div>
   </div>
-  <span class="tag">Treinamento 08.2026</span>
+  <span class="tag">Atualizado 23.11.2026</span>
 </header>
 
 <nav class="menu">
   <a href="#portfolio">Produtos</a>
+  <a href="#acomodacao-pf"><span class="novo">Acomodação PF (NOVO)</span></a>
   <a href="#oferta">Oferta x Canais</a>
   <a href="#filiais">Filiais</a>
   <a href="#repique">Repique</a>
   <a href="#regras"><span class="novo">Regras Comerciais (NOVO)</span></a>
+  <a href="#material">Material Oficial</a>
+  <a href="novo/mapa_leaflet.html" target="_blank">🗺️ Mapa</a>
   <a href="#quiz">Quiz</a>
 </nav>
 
@@ -145,6 +156,23 @@
     <div class="abas" id="pAbas"></div>
     <div class="aba-corpo" id="pCorpo"></div>
   </div>
+</section>
+
+<section class="sec" id="acomodacao-pf">
+  <h2><span class="n">A</span>Produto Individual – Acomodação <span class="novo">(NOVO 23/11)</span></h2>
+  <div class="desc">Regra específica para o canal <b>Individual/Familiar (PF)</b>, vigente a partir de <b>23/11/2026</b>.</div>
+  <div class="aviso novo-aviso">📢 <b>A partir de 23/11/2026, o plano Individual (PF) não está mais disponível na acomodação APARTAMENTO.</b><br>✅ <b>Acomodação ENFERMARIA</b> permanece sem alterações, com aceitação para <b>todas as faixas etárias</b>.</div>
+  <div class="tabela-wrap" style="margin-top:12px;">
+    <table class="tabela">
+      <thead><tr><th>Produto PF (Individual)</th><th>Acomodação a partir de 23/11</th><th>Faixas etárias</th></tr></thead>
+      <tbody>
+        <tr><td><b>Nosso Médico</b></td><td><span class="s">Enfermaria</span> <span class="x">• Apartamento indisponível no PF</span></td><td>Todas as faixas etárias</td></tr>
+        <tr><td><b>Smart Up</b></td><td><span class="s">Enfermaria</span> <span class="x">• Apartamento indisponível no PF</span></td><td>Todas as faixas etárias <span class="novo">(regra dos 50 anos revogada)</span></td></tr>
+        <tr><td><b>Smart Up Ambulatorial</b></td><td>Sem acomodação hospitalar (plano ambulatorial)</td><td>Todas as faixas etárias</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="aviso azul" style="margin-top:12px;">ℹ️ <b>SS/PME não sofrem alteração:</b> mantêm Enfermaria e Apartamento conforme cada produto.</div>
 </section>
 
 <details class="sec acc" id="oferta">
@@ -215,7 +243,7 @@
 
       <h4 style="margin-top:18px;">Outra operadora (redução)</h4>
       <ul class="lista">
-        <li><span class="novo">Idade limite para redução: até <b>69 anos completos</b> (PF, SS e PME)</span> <span class="novo">(NOVO)</span>;</li>
+        <li><span class="novo">Idade limite para redução: até <b>69 anos completos</b> (PF, SS e PME) — reforçado em <b>23/11/2026</b> para PF vindo de outra operadora</span> <span class="novo">(NOVO)</span>;</li>
         <li>Confirmar a lista de operadoras congêneres;</li>
         <li>Não realizamos a soma do tempo de permanência entre operadoras. Para análise, é considerado apenas o tempo do último plano ativo.</li>
       </ul>
@@ -308,7 +336,7 @@
         <li><b>Prestador de serviço e convívio marital:</b> assinatura GOV, digital ou reconhecimento de firma em cartório. Filhos em comum não comprovam vínculo.</li>
         <li><b>Repique:</b> ex-beneficiário querendo retornar à operadora — consultar regras vigentes no Portal da Corretora.</li>
       </ul>
-      <div class="aviso novo-aviso" style="margin-top:12px;">⚠️ <b>REGRAS NOVAS VÁLIDAS A PARTIR DE 01/09/2026</b> <span class="novo">(NOVO)</span><br>Titular e Cônjuge — <b>sem limite de idade</b>. Demais agregados — até <b>69 anos</b>. Redução de carência (congênere): até <b>69 anos completos</b> (PF, SS e PME). Operadora Select agora integrada como congênere (ANS 35.805-3).</div>
+      <div class="aviso novo-aviso" style="margin-top:12px;">⚠️ <b>REGRAS NOVAS VÁLIDAS A PARTIR DE 01/09/2026</b> <span class="novo">(NOVO)</span><br>Titular e Cônjuge — <b>sem limite de idade</b>. Demais agregados — até <b>69 anos</b>. Redução de carência (congênere): até <b>69 anos completos</b> (PF, SS e PME). Operadora Select agora integrada como congênere (ANS 35.805-3).<br><b>Reforço 23/11 (PF):</b> aceitação de <b>todas as idades com comissão</b>; redução de carência até <b>69 anos</b> quando o cliente vem de outra operadora.</div>
     </div>
   </details>
 
@@ -373,7 +401,7 @@
             <tr><td>Advance 600</td><td class="c">7 dias</td><td class="c">R$ 75,00</td><td class="c">1</td></tr>
             <tr><td>Advance 700</td><td class="c">7 dias</td><td class="c">R$ 96,00</td><td class="c">1</td></tr>
             <tr><td>Premium 900.1 / 900 Care</td><td class="c">5 dias</td><td class="c">R$ 240,00</td><td class="c">3 / 2</td></tr>
-            <tr><td>Infinity 1000.11</td><td class="c">3 dias</td><td class="c">R$ 400,00</td><td class="c">5</td></tr>
+            <tr><td>Infinity 1000.11</td><td class="c">3 dias</td><td class="c">R$ 400,00</td><td class="c">2 <span class="novo">(NOVO)</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -418,16 +446,110 @@
     <summary>3.7 • Portais, Planium e outras regras <span class="novo">(NOVO)</span> <span class="pgref">pg. 33, 83–94, 97</span></summary>
     <div class="corpo">
       <ul class="lista">
-        <li><b>Portal do Vendedor (CPF):</b> vendas PF; Declaração de Saúde preenchida pelo vendedor no momento de subir a venda. Atenção ao aproveitamento de carência e ao desconto de plano familiar.</li>
+        <li><b>Portal do Vendedor (CPF):</b> vendas PF; Declaração de Saúde preenchida pelo vendedor no momento de subir a venda. Atenção ao aproveitamento de carência e ao <b>desconto VITALÍCIO de 7% em plano familiar</b>.</li>
         <li><b>Portal da Corretora (CNPJ):</b> consulta de orçamentos e vendedores, repique e numeração de carteirinha; consultar, regularizar, excluir orçamentos e reenviar SMS.</li>
         <li><b>Portal do Cliente:</b> 1º boleto somente pelo Portal do Cliente.</li>
         <li><b>App de Vendas PF (Android)</b> e <b>Vendas ON</b>.</li>
+        <li><span class="novo"><b>Regras PF (NOVO 23/11):</b> vigência conforme a <b>data de pagamento</b>; proposta com prazo de <b>25 dias</b>; pagamento por <b>cartão de crédito ou boleto</b>. Atenção à emissão, ao vencimento e à documentação para evitar pendências.</span></li>
         <li><b>Planium:</b> sistema de vendas WEB para SS/PME. Vigência: vencimento do 1º boleto 3 dias após a vigência; 2º boleto conforme tabela; atraso na vigência ajusta vencimento automaticamente.</li>
         <li><span class="novo"><b>Novo prazo de vendas via Planium:</b> agora é possível incluir contratos com até <b>80 dias futuros</b>. Datas de ativação: 5, 10, 15, 30, 60 e 80 dias. Canais: Super Simples e PME <b>(NOVO)</b></span></li>
         <li><b>Produtos mistos:</b> Advance, Premium e Infinity podem ser misturados com Nosso Médico, Smart Up, Smart Flex e Smart Prime (ex.: 1 vida Smart Up + 1 vida Advance).</li>
         <li><b>Taxa de implantação SS/PME:</b> R$ 25,00 por proposta. Produtos PF: sem taxa de implantação.</li>
         <li><b>Infinity – contatos:</b> agendamento pelo Concierge da Unidade (11) 95649-0785; dúvidas e autorização de procedimentos (11) 98515-5856. Check-up disponível apenas para titulares.</li>
+        <li><b>Infinity 1000.11:</b> comercializado <b>a partir de 2 vidas</b> na proposta (produtos mistos).</li>
       </ul>
+    </div>
+  </details>
+
+  <details class="acc" open>
+    <summary>3.8 • Regras Comerciais – PF (vigência, proposta, pagamento e desconto) <span class="novo">(NOVO 23/11)</span></summary>
+    <div class="corpo">
+      <div class="aviso novo-aviso">📢 <b>Regras Comerciais – Pessoa Física (PF)</b>, vigentes a partir de <b>23/11/2026</b>.</div>
+      <ul class="lista" style="margin-top:10px;">
+        <li><b>Vigência:</b> conforme a <b>data de pagamento</b>.</li>
+        <li><b>Prazo da proposta:</b> <b>25 dias</b>.</li>
+        <li><b>Aceitação:</b> <b>todas as idades</b>, <b>com comissão</b>.</li>
+        <li><b>Redução de carência:</b> até <b>69 anos</b>, quando o cliente vem de <b>outra operadora</b>.</li>
+        <li><b>Plano familiar:</b> desconto <b>VITALÍCIO de 7%</b>.</li>
+        <li><b>Pagamento:</b> <b>cartão de crédito</b> ou <b>boleto</b>.</li>
+      </ul>
+      <div class="aviso" style="margin-top:12px;">📌 Fiquem atentos às regras de <b>emissão, vencimento e documentação</b> para evitar pendências nas propostas!</div>
+    </div>
+  </details>
+  </div>
+</details>
+
+<details class="sec acc" id="material">
+  <summary><span class="n">M</span>Material Oficial e Guias</summary>
+  <div class="corpo">
+    <div class="desc">Tabelas de preços, material oficial do treinamento, guias, mapas e documentos modelos para apoiar suas vendas.</div>
+
+  <details class="acc">
+    <summary>Resumo em Texto (.md)</summary>
+    <div class="corpo">
+      <p style="margin-bottom:8px;">O mesmo conteúdo deste treinamento em arquivo de texto (Markdown), para consulta rápida e cópia.</p>
+      <section class="link-ul">
+        <a href="TREINAMENTO_HAPVIDA_SP_2026.md" target="_blank">Abrir resumo em texto <span class="doc-tipo md">MD</span></a>
+      </section>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary>Tabelas de Preços</summary>
+    <div class="corpo">
+      <section class="link-ul">
+        <h4>Pessoa Física / Individual</h4>
+        <a href="TABELA_-_Individual_-_NDI_Sede_-_Sem_Desconto.pdf" target="_blank">Individual – NDI Sede – Sem Desconto <span class="doc-tipo pdf">PDF</span></a>
+        <a href="TABELA_-_Individual_Ambulatorial_-_NDI_Sede_-_Sem_Desconto (1).pdf" target="_blank">Individual Ambulatorial – NDI Sede <span class="doc-tipo pdf">PDF</span></a>
+        <a href="499967147_20260701_a_20260930_-_Individual_Ambulatorial_-_NDI_Sede_-_Sem_Desconto.pdf" target="_blank">Individual Ambulatorial – jan a set/26 <span class="doc-tipo pdf">PDF</span></a>
+      </section>
+      <section class="link-ul">
+        <h4>Super Simples (SS)</h4>
+        <a href="TABELA_-_Super_Simples_1_Vida_2.pdf" target="_blank">Super Simples – 1 Vida <span class="doc-tipo pdf">PDF</span></a>
+        <a href="TABELA_-_Super_Simples_2_a_29_vidas_-_Demais_Empresas_-_NAO_MEI.pdf" target="_blank">Super Simples – 2 a 29 vidas – Demais Empresas (Não MEI) <span class="doc-tipo pdf">PDF</span></a>
+        <a href="TABELA_-_Super_Simples_2_a_29_vidas_-_MEI_1.pdf" target="_blank">Super Simples – 2 a 29 vidas – MEI <span class="doc-tipo pdf">PDF</span></a>
+        <a href="TABELA_-_Super_Simples_2_a_29_vidas_-_Demais_Pracas_1.pdf" target="_blank">Super Simples – 2 a 29 vidas – Demais Praças <span class="doc-tipo pdf">PDF</span></a>
+      </section>
+      <section class="link-ul">
+        <h4>PME</h4>
+        <a href="TABELA_-_PME_-_Adesao.pdf" target="_blank">PME – Adesão <span class="doc-tipo pdf">PDF</span></a>
+        <a href="TABELA_-_PME_-_Compulsorio.pdf" target="_blank">PME – Compulsório <span class="doc-tipo pdf">PDF</span></a>
+        <a href="TABELA_-_PME_-_Demais_Pracas.pdf" target="_blank">PME – Demais Praças <span class="doc-tipo pdf">PDF</span></a>
+      </section>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary>Material Oficial do Treinamento</summary>
+    <div class="corpo">
+      <section class="link-ul">
+        <a href="0. TREINAMENTO HAPVIDA - CORRETOR 08.2026.pdf" target="_blank">Treinamento Hapvida – Corretor 08.2026 (.pdf) <span class="doc-tipo pdf">PDF</span></a>
+        <a href="0. TREINAMENTO HAPVIDA - CORRETOR 08.2026.pptx" target="_blank">Treinamento Hapvida – Corretor 08.2026 (.pptx) <span class="doc-tipo pptx">PPTX</span></a>
+      </section>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary>Guias e Rede</summary>
+    <div class="corpo">
+      <section class="link-ul">
+        <a href="Guia_de_Produtos_-_SP_CAPITAL.pdf" target="_blank">Guia de Produtos – SP Capital <span class="doc-tipo pdf">PDF</span></a>
+        <a href="REDE PROPRIA BRASIL_HAP.pdf" target="_blank">Rede Própria Brasil <span class="doc-tipo pdf">PDF</span></a>
+        <a href="novo/rede_propria.html" target="_blank">Rede Própria – Mapa Interativo <span class="doc-tipo html">HTML</span></a>
+        <a href="novo/mapa_leaflet.html" target="_blank">Mapa – Leaflet <span class="doc-tipo html">HTML</span></a>
+        <a href="novo/mapa.html" target="_blank">Mapa – Simples <span class="doc-tipo html">HTML</span></a>
+      </section>
+    </div>
+  </details>
+
+  <details class="acc">
+    <summary>Documentos Modelos</summary>
+    <div class="corpo">
+      <section class="link-ul">
+        <a href="1. MODELO PADRÃO CARTA DE RESPONSABILIDADE - fev24 atualizada.docx" target="_blank">Modelo Padrão – Carta de Responsabilidade <span class="doc-tipo docx">DOCX</span></a>
+        <a href="2. CONTRATO DE PRESTAÇÃO DE SERVIÇOS.docx" target="_blank">Contrato de Prestação de Serviços <span class="doc-tipo docx">DOCX</span></a>
+        <a href="3. DECLARAÇÃO DE CONVÍVIO MARITAL.docx" target="_blank">Declaração de Convívio Marital <span class="doc-tipo docx">DOCX</span></a>
+      </section>
     </div>
   </details>
   </div>
@@ -635,7 +757,7 @@ var PRODUTOS = [
     minVidas: "1 vida (PF)",
     carac: [
       ["Segmentação","Ambulatorial + Hospitalar com Obstetrícia (AH | AHO)"],
-      ["Acomodação","Enfermaria e Apartamento"],
+      ["Acomodação","PF: somente Enfermaria (a partir de 23/11/2026) | SS/PME: Enfermaria e Apartamento"],
       ["Coparticipação","Copay Total e Parcial | S/ Copay somente Corp"],
       ["Plano","Completo Ambulatorial, Hospitalar c/ Obstetrícia e Odonto (ROL ANS)"],
       ["Médico da família","Atendimento presencial e online"]
@@ -648,7 +770,7 @@ var PRODUTOS = [
     rede: ["Hospital Bosque da Saúde","Hospital e Mat. Nossa Senhora do Rosário","Hospital e Mat. Salvalus","Hospital Keila Ferreira","Hospital Frei Galvão","Hospital Santana Mogi","Mat. Notrecare ABC","Hospital Jardim Anália Franco","Hospital Cruzeiro do Sul","Hospital Nova Vida","Hospital São Bernardo"],
     labs: ["Diagnóstico Vila Carrão","Diagnóstico Santa Cruz","Notrelabs Tatuapé","Notrelabs Qualivida Angélica"],
     cidades: ["RMSP (19 cidades): Arujá, Barueri, Caieiras, Carapicuíba, Cotia, Diadema, Guarulhos, Itapevi, Jandira, Mauá, Mogi das Cruzes, Osasco, Ribeirão Pires, Santo André, Santos, São Bernardo do Campo, São Paulo (Capital), São Vicente e Taboão da Serra","Outras praças: Campinas, Jundiaí, Americana e Sorocaba"],
-    extras: []
+    extras: [["Acomodação Individual (NOVO 23/11)",["PF não comercializa Apartamento — apenas Enfermaria","Enfermaria aceita todas as faixas etárias","SS/PME mantêm Enfermaria e Apartamento"]]]
   },
   {
     nome: "Smart Up",
@@ -659,7 +781,7 @@ var PRODUTOS = [
     minVidas: "1 vida (PF)",
     carac: [
       ["Segmentação","Ambulatorial + Hospitalar com Obstetrícia (AH | AHO)"],
-      ["Acomodação","Enfermaria e Apartamento* | *PF: a partir de 50 anos; *SS/PME: todas as idades"],
+      ["Acomodação","PF: somente Enfermaria (a partir de 23/11/2026) | SS/PME: Enfermaria e Apartamento (todas as idades)"],
       ["Atendimento","Rede Própria e Rede Credenciada"],
       ["Plano","Completo Ambulatorial, Hospitalar c/ Obstetrícia e Odonto (ROL ANS)"],
       ["Versão PF ambulatorial","U/E 24h (12h de permanência), consultas, exames, cirurgias ambulatoriais e terapias — NÃO tem atendimento hospitalar"]
@@ -673,7 +795,7 @@ var PRODUTOS = [
     rede: ["Toda a Rede do Nosso Médico +","P.S. Hospital Albert Sabin","P.S. Hospital Portinari","P.S. Hospital Cruz Azul","P.S. Hospital Vidas","Hospital Paulo Sacramento","Hospital Renascença Campinas","Hospital e Mat. Modelo","Hospital Notrecare Sorocaba","Cema"],
     labs: ["Diagnóstico Vila Carrão","Diagnóstico Santa Cruz","Notrelabs Tatuapé","Notrelabs Qualivida Angélica"],
     cidades: ["Smart UP SP: Americana, Arujá, Barueri, Caieiras, Cajamar, Campinas, Campo Limpo Paulista, Carapicuíba, Cotia, Cubatão, Diadema, Embu das Artes, Ferraz de Vasconcelos, Guararema, Guarujá, Guarulhos, Hortolândia, Itapevi, Itaquaquecetuba, Itu, Itupeva, Jandira, Jundiaí, Louveira, Mauá, Mogi das Cruzes, Nova Odessa, Osasco, Poá, Ribeirão Pires, Santa Bárbara d'Oeste, Santa Isabel, Santo André, Santos, São Bernardo do Campo, São Caetano do Sul, São Paulo, São Vicente, Sorocaba, Sumaré, Suzano, Taboão da Serra, Várzea Paulista, Vinhedo, Votorantim","Smart RIO: Belford Roxo, Duque de Caxias, Itaboraí, Magé, Maricá, Mesquita, Nilópolis, Niterói, Nova Iguaçu, Rio de Janeiro, São Gonçalo, São João de Meriti"],
-    extras: []
+    extras: [["Acomodação Individual (NOVO 23/11)",["PF não comercializa Apartamento — apenas Enfermaria","Regra anterior de Apartamento PF a partir de 50 anos foi revogada","Enfermaria aceita todas as faixas etárias","SS/PME mantêm Enfermaria e Apartamento"]]]
   },
   {
     nome: "Smart Up Ambulatorial",
@@ -699,7 +821,7 @@ var PRODUTOS = [
     rede: ["Toda a Rede do Nosso Médico (ambulatorial)"],
     labs: ["Diagnóstico Vila Carrão","Diagnóstico Santa Cruz","Notrelabs Tatuapé","Notrelabs Qualivida Angélica"],
     cidades: ["SP: Americana, Barueri, Carapicuíba, Cajamar, Campinas, Campo Limpo Paulista, Caieiras, Cotia, Cubatão, Diadema, Embu das Artes, Guarujá, Guarulhos, Hortolândia, Itu, Itupeva, Itapevi, Jandira, Jundiaí, Louveira, Mauá, Nova Odessa, Osasco, Santa Bárbara D'Oeste, Santo André, São Bernardo do Campo, São Caetano, Santos, São Vicente, Ribeirão Pires, Sorocaba, Taboão da Serra, São Paulo, Sumaré, Várzea Paulista, Vinhedo e Votorantim","RJ: Belford Roxo, Duque de Caxias, Itaboraí, Maricá, Mesquita, Nilópolis, Niterói, Nova Iguaçu, Rio de Janeiro, São Gonçalo e São João do Meriti"],
-    extras: [["Atenção",["Após 12h ou internação = particular ou transferência para o SUS quando houver vaga","NÃO tem atendimento Hospitalar"]]]
+    extras: [["Atenção",["Após 12h ou internação = particular ou transferência para o SUS quando houver vaga","NÃO tem atendimento Hospitalar"]],["Acomodação Individual (NOVO 23/11)",["Produto PF ambulatorial — sem acomodação hospitalar e sem Apartamento","Demais regras de faixa etária permanecem sem alteração"]]]
   },
   {
     nome: "Smart Flex SP",
@@ -931,7 +1053,7 @@ var PRODUTOS = [
     canais: ["PME","CORP","ADES","LIC"],
     abran: "NACIONAL",
     mercado: "SS | PME",
-    minVidas: "5 vidas",
+    minVidas: "2 vidas",
     carac: [
       ["Segmentação","Ambulatorial + Hospitalar com Obstetrícia (AH | AHO)"],
       ["Acomodação","Enfermaria e Apartamento"],
@@ -954,7 +1076,7 @@ var PRODUTOS = [
     rede: ["Toda a Rede do Premium 900 +","Hospital Albert Einstein","Hospital Sírio-Libanês","Maternidade São Luiz Star","Hospital BP Mirante","Maternidade Pro Matre","Hospital Infantil Sabará","Hospital Copa Star (Rio)"],
     labs: ["Laboratório Fleury (SP)","Alta Diagnósticos","Unidade Advance"],
     cidades: ["Abrangência nacional"],
-    extras: [["Contratos",["A partir de 5 vidas na proposta (produtos mistos)","Check-up apenas para titulares do Infinity"]],["Contatos",["Concierge da Unidade (agendamento): (11) 95649-0785","Dúvidas e autorização de procedimentos: (11) 98515-5856"]]]
+    extras: [["Contratos",["A partir de 2 vidas na proposta (produtos mistos) (NOVO)","Check-up apenas para titulares do Infinity"]],["Contatos",["Concierge da Unidade (agendamento): (11) 95649-0785","Dúvidas e autorização de procedimentos: (11) 98515-5856"]]]
   }
 ];
 
@@ -971,7 +1093,7 @@ var OFERTA = [
   ["Advance 700",[0,1,1,1,1,1],"1 vida","NACIONAL"],
   ["Premium 900 Care",[0,1,1,1,1,1],"2 vidas","NACIONAL"],
   ["Premium 900.1",[0,1,1,1,1,1],"3 vidas","NACIONAL"],
-  ["Infinity 1000.11",[0,0,1,1,1,1],"5 vidas","NACIONAL"]
+  ["Infinity 1000.11",[0,0,1,1,1,1],"2 vidas <span class=\"novo\">(NOVO)</span>","NACIONAL"]
 ];
 
 var COLS = ["IND","SS","PME","CORP","ADES","LIC"];
@@ -1068,7 +1190,13 @@ function showAba(a) {
 var QUIZ_TOTAL = [
   { q: "Qual produto é o único com foco em Medicina da Família, com até 3 dias úteis para consulta?", o: ["Advance 700","Nosso Médico","Smart Flex","Infinity 1000.11"], c: 1, r: "Nosso Médico — médicos de família com acompanhamento dedicado (presencial e online)." },
   { q: "Qual produto NÃO possui reembolso?", o: ["Advance 600","Premium 900 Care","Smart Prime","Infinity 1000.11"], c: 2, r: "Smart Prime — cobertura nacional do varejo, sem reembolso." },
-  { q: "A partir de quantas vidas o Infinity 1000.11 é comercializado?", o: ["1 vida","2 vidas","3 vidas","5 vidas"], c: 3, r: "5 vidas na proposta (produtos mistos)." },
+  { q: "A partir de quantas vidas o Infinity 1000.11 é comercializado?", o: ["1 vida","2 vidas","3 vidas","5 vidas"], c: 1, r: "2 vidas na proposta (produtos mistos)." },
+  { q: "A partir de 23/11/2026, qual acomodação o plano Individual (PF) ainda comercializa?", o: ["Apartamento","Enfermaria, para todas as faixas etárias","Apartamento somente acima de 50 anos","Nenhuma acomodação"], c: 1, r: "A partir de 23/11/2026 o PF não comercializa Apartamento; a Enfermaria permanece para todas as faixas etárias (inclusive Smart Up)." },
+  { q: "Qual o prazo de validade da proposta PF (regra 23/11)?", o: ["15 dias","25 dias","30 dias","80 dias"], c: 1, r: "A proposta PF tem prazo de 25 dias." },
+  { q: "A vigência do plano PF é definida por qual data?", o: ["Data da proposta","Data de pagamento","Data da emissão do boleto","Data da assinatura"], c: 1, r: "Vigência conforme a data de pagamento." },
+  { q: "Qual desconto vale para o plano familiar PF?", o: ["5% vitalício","7% vitalício","7% por 12 meses","10% temporário"], c: 1, r: "Plano familiar com desconto VITALÍCIO de 7%." },
+  { q: "Quais formas de pagamento são aceitas no PF?", o: ["Cartão de crédito ou boleto","Somente boleto","Somente cartão de crédito","Pix ou boleto"], c: 0, r: "Pagamento por cartão de crédito ou boleto." },
+  { q: "Vindo de outra operadora, até que idade a redução de carência é aceita no PF?", o: ["Até 64 anos","Até 69 anos","Até 74 anos","Sem limite"], c: 1, r: "Redução de carência até 69 anos completos quando o cliente vem de outra operadora." },
   { q: "Qual a diferença entre Premium 900 Care e Premium 900.1?", o: ["Só o preço, são iguais","Rede D'Or (Care sem D'Or; 900.1 com D'Or) e vidas mínimas","Um é nacional e o outro regional","Um tem odonto e o outro não"], c: 1, r: "Care = sem rede D'Or, a partir de 2 vidas. 900.1 = com rede D'Or (São Luiz), a partir de 3 vidas." },
   { q: "Reembolso do Advance 700: prazo e limite diário.", o: ["7 dias • R$ 96,00","7 dias • R$ 75,00","5 dias • R$ 240,00","3 dias • R$ 400,00"], c: 0, r: "Advance 700 = 7 dias • R$ 96,00. Advance 600 = 7 dias • R$ 75,00. Premium = 5 dias • R$ 240,00. Infinity = 3 dias • R$ 400,00." },
   { q: "A área de vendas considera municípios de até ___ da filial, e a venda é feita pelo ___ do beneficiário.", o: ["20 km • endereço da empresa","40 km • endereço residencial","40 km • endereço comercial","60 km • CEP da filial"], c: 1, r: "Até 40 km da filial, conforme o endereço RESIDENCIAL do beneficiário — nunca o da empresa." },
@@ -1081,8 +1209,8 @@ var QUIZ_TOTAL = [
   { q: "Qual o prazo de reembolso do Premium 900.1 e 900 Care?", o: ["7 dias","5 dias","3 dias","10 dias"], c: 1, r: "5 dias • R$ 240,00/dia para Premium 900.1 e 900 Care." },
   { q: "O Smart Prime possui cobertura em quantos estados brasileiros?", o: ["15 estados","20 estados","27 estados","Nacional (todos os estados)"], c: 2, r: "27 estados, presente nas 5 regiões do Brasil." },
   { q: "Smart Up Ambulatorial NÃO tem cobertura de:", o: ["Consultas e exames","Terapias","Atendimento Hospitalar","Urgência/Emergência"], c: 2, r: "Smart Up Ambulatorial: U/E 24h, consultas, exames, cirurgias ambulatoriais e terapias — NÃO tem atendimento hospitalar." },
-  { q: "Idade limite para aceitação de cônjuge (dependente) na maioria dos produtos:", o: ["53 anos","65 anos","74 anos","80 anos"], c: 2, r: "74 anos para cônjuge dependente em todos os produtos." },
-  { q: "Filhos solteiros, adotivos e enteados têm idade limite de:", o: ["53 anos","65 anos","74 anos","18 anos"], c: 0, r: "53 anos para filhos solteiros, adotivos e enteados." },
+  { q: "Idade limite para aceitação de cônjuge (dependente) na maioria dos produtos:", o: ["53 anos","69 anos","Sem limite","80 anos"], c: 2, r: "Sem limite de idade para cônjuge dependente (regra vigente e reforçada para PF em 23/11/2026)." },
+  { q: "Filhos solteiros, adotivos e enteados têm idade limite de:", o: ["69 anos","65 anos","74 anos","18 anos"], c: 0, r: "69 anos para filhos solteiros, adotivos e enteados." },
   { q: "O que é compulsory no plano PME?", o: ["Apenas os sócios","100% dos sócios e 100% dos funcionários titulares com vínculo ativo","Só funcionários CLT","Apenas o dono da empresa"], c: 1, r: "100% dos sócios e 100% dos funcionários titulares com vínculo empregatício ativo (registrados no e-Social)." },
   { q: "Para encampação PME, qual a permanência mínima no plano anterior?", o: ["6 meses","12 meses","24 meses","Não há mínimo"], c: 1, r: "Permanência mínima de 12 meses no plano anterior, sem acréscimos ou exclusões." },
   { q: "Intervalo máximo entre a rescisão do contrato anterior e o protocolo da nova proposta (encampação):", o: ["15 dias","30 dias corridos","60 dias","90 dias"], c: 1, r: "Intervalo máximo de 30 dias corridos entre a rescisão e o protocolo da nova proposta." },
